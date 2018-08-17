@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!-- Isso e a tag de HTML serve basicamente pra dizer ao navegador que versão do html vc tá usando e fazer ele compatível pelo que entendi-->
+<html>
+<head>
+    <h1 class="orange-text">Para quem ama doguinhos uma pag de doguinhos</h1> <!-- style nesse caso serve pra mudar a cor como foi especificado
+      vc pode escrever o nome da cor, caso haja na biblioteca ou por o código da mesma como eu fiz aqui.
+      O jeito que é usado aqui é mais para quando você quer mudar uma linha só-->
+    </head><!-- Pra especificar o que fica em cima e o inicio, é bem pra titulo mesmo-->
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css"><!--Isto aqui é para importar fontes do Google e como está escrito, é elemento de CSS-->
+<style>
+.orange-text{
+     color: rgb(199, 133, 47);
+     }
+     .fontSize{
+       font-size: 16px;
+       font-family:Lobster;
+
+     }
+     h1{
+       font-size: 40px;
+       font-family: Arial;
+     }
+     .imagem-grande{
+       width: 1000px;
+     }
+      /** o Comentário em css é assim
+         Esse é como faz direto na linha, sem criar a classe:
+		 <h1 style="color:#D5782B, font-size">
+		 Isso é de CSS, serve pra vc definir cores, tipo de fonte, preenchimento de cor, etc, do site
+           Por padrão seria algo como :
+		   h1{color:red;}
+		   (ou o elemento em questão, aqui to demonstrando como se fosse o título dentro de style)
+		   Ainda aqui dentro vocÊ também poderia criar uma classe. Ex;
+		     .blue-text {
+              color: blue;
+                  }
+				  esse ponto final antes indica que vc está criando a classe,pelo menos aqui dentro de style.
+				  e então vc atualizaria seu h1 para:
+				  <h1 class="blue-text">Para quem ama doguinhos uma pag de doguinhos</h1>
+				  A últilidade disso é que se eu quiser aplicar a outra classe eu posso, por exemplo se eu fosse usar em um parágrafo:
+				  <p class="blue-text"> ... </p>
+				  Para se mudar o tamanho da fonte a piscicologia é a mesma. Agora vamos aplicar uma mudança real em h1.
+				  Dá pra usar o RGB também, que mágico.
+		   **/
+     
+
+</style>
+
+
+<body><!--literalmente o corpo do código-->
+<main>
+<p>
+<a href="#footer" >Final da pag</a><!-- Isso serve para criar um link interno para o final da própria página, existem outros comandos mas o footer é pra levar pro final e não pode esquecer de especificar o id no final da pag-->
+<a href="https://twitter.com/_olarSarah">Meu Twitter</a><!--Isso serve pra por links externos e o texto depois é o nome que vc dá-->
+<!-- esse link depois do href = também pode ser substituido por um simbolo tipo # 
+e aí ficaria tipo <a href="#"><img src="link da img" alt="Nome de referencia da img"></a>
+Isso transforma a img em si em um link -->
+O link para o meu <a href="https://www.instagram.com/olarsarah/">insta</a> de arte
+<img class="imagem-grande" src="https://gfnc1kn6pi-flywheel.netdna-ssl.com/wp-content/uploads/2017/05/girl-names-1024x563.jpg" alt="Doguinhos entediados."><!--o mesmo que o debaixo mas para imagens-->
+ <!--Aqui era pra ter um parágrafo de alguma coisa e a tag do p é de parágrafo  -->
+<br><p class="fontSize">Um texto sobre doguinhos virá pra cá futuramente.</p><br> <!-- a tag br serve para pular linhas-->
+<p>E mais um parágrafo aqui</p>
+<!-- u1 e o1 são listas, u1 coloca pontos antes de cada item e o1 coloca a numeração de acordo com os itens colocados antes de casa item -->
+<div> <p>Coisas que doguinhos amam:</p>
+ <ul>
+    <li>comida</li>
+    <li>gente</li>
+    <li>brinquedos</li>
+  </ul>
+  <p>3 coisas que doguinhos odeiam:</p>
+  <ol>
+    <li>ficar sozinhos</li>
+    <li>ficar doentes</li>
+    <li>sprays em geral</li>
+  </ol>
+  </div><!-- Div é literalmente uma divisória, é como se vc pegasse um bloco de informação e separasse do resto-->
+  <p>Submeta uma foto do seu dog e marque as características que ele apresentar</p>
+  <form action="/submit-foto-de-doguinhos">
+  <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor"> Dentro de casa</label>
+    <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor"> Fora de casa</label><br>
+	<!-- indoor e outdoor são radio buttons, não entendi muito bem,mas é aquelas opções que ou vc marca uma ou a outra(só mudei o nome de indoor e outdoor pq eu quis mesmo)-->
+  <label><input type="checkbox" name="personality"> Amoroso</label>
+    <label><input type="checkbox" name="personality"> Comilão</label>
+    <label><input type="checkbox" name="personality"> Festeiro</label><br>
+	<!--checkbox é o que dá pra marcar mais de uma opção, é tipo uma lista de conferes-->
+  <input type="text" placeholder="url de foto de doguinhos" required> <!-- se não me engano é uma caixa de diálogo onde o usuário pode escrever conforme o pedido
+  o placeholder serve pra colocar um texto dentro da caixa (caso vc queira) indicando o que vc deve por ali
+  O required serve pra especificar que o usuário só vai poder te enviar algo depois que ele tiver preenchido as informações da maneira que vc requeriu (texto, img, etc-->
+  <button type="submit">Enviar</button> <!-- criando um botão para o usuário poder enviar o que é pedido-->
+ </form><!-- o form começa antes e termina depois dessa caisa de diálogo justamente para podermos enviar as imagens para algum lugar real-->
+  </p>
+</main>
+<footer id="footer">Copyright da pag de doguinhos</footer>
+<!-- Aqui em cima é o que eu falei de especificar o id, esse comentario em preto no meio pode ser qualquer coisa, eu só usei o que já estava e adaptei para pag que eu to fazendo -->
+</body>
+</html>
